@@ -1,17 +1,23 @@
-input.onButtonPressed(Button.A, function () {
-    colour += 1
-    if (colour > 7) {
-        colour = 0
+radio.onReceivedNumber(function (receivedNumber) {
+    if (receivedNumber == 0) {
+        colour += 1
+        if (colour > 7) {
+            colour = 0
+        }
+    }
+    if (receivedNumber == 1) {
+        brightness += 50
+        if (brightness > 250) {
+            brightness = 5
+        }
     }
 })
 input.onButtonPressed(Button.B, function () {
-    brightness += 50
-    if (brightness > 250) {
-        brightness = 5
-    }
+	
 })
 let brightness = 0
 let colour = 0
+radio.setGroup(11)
 colour = 0
 brightness = 5
 let tileDisplay = Kitronik_Zip_Tile.createZIPTileDisplay(1, 1, Kitronik_Zip_Tile.UBitLocations.Hidden)
