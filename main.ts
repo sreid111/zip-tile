@@ -12,9 +12,6 @@ radio.onReceivedNumber(function (receivedNumber) {
         }
     }
 })
-input.onButtonPressed(Button.B, function () {
-	
-})
 let brightness = 0
 let colour = 0
 radio.setGroup(11)
